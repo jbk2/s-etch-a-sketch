@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+button, #grid-size {
+  position: absolute;
+  margin-top: 1rem;
+  left: 50%;
+}
+
+#squares-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vw;
+  border: 1px solid red;
+  gap: 0;
+  overflow: hidden;
+  align-content: start;     /* Pack items at the start to avoid extra spacing */
+  align-items: start;
+}
+
+.square {
+  box-sizing: border-box;
+}
