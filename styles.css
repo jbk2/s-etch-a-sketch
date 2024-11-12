@@ -13,9 +13,9 @@ button, #grid-size {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vw;
-  border: 1px solid red;
+  /* width: 100vw; */
+  /* height: 100vw; */
+  border: 2px solid blue;
   gap: 0;
   overflow: hidden;
   align-content: start;     /* Pack items at the start to avoid extra spacing */
@@ -24,4 +24,8 @@ button, #grid-size {
 
 .square {
   box-sizing: border-box;
+}
+
+.hovered {
+  background-color: red;
 }

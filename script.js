@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function buildGrid() {
     let sqWidth = Math.floor(windowWidth / gridSize) - 1;
-    let sqHeight = Math.floor(windowHeight / gridSize) - 1;
-    console.log(sqWidth);
-    console.log(sqHeight);
+    let sqHeight = Math.floor(windowHeight / gridSize);
     container.innerHTML = "";
 
     for (let i = 1; i <= gridSize; i++) {
@@ -20,15 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
         square.classList.add('square');
         square.style.width = sqWidth + 'px';
         square.style.height = sqHeight + 'px';
-        square.style.border = '1px solid black';
+        // square.style.border = '1px solid black';
         container.appendChild(square);
       }
     }
+
+    let squares = document.querySelectorAll('.square');
+  
+    squares.forEach(square => {
+      square.addEventListener('mouseenter', (event) => {
+        console.log(event);
+        event.target.classList.add('hovered');
+      });
+    })
+
+
+
   };
 
   function getGridSize() {
-    gridSize = prompt('what size  grid do you want');
+    
+    do {
+      gridSize = Number(prompt('choose a grid size between 2-200'));
+    } while (isNaN(gridSize) || gridSize < 2 || gridSize > 200);
+
+    console.log(typeof(gridSize));
     console.log(gridSize);
+  
     buildGrid();
   };
 
