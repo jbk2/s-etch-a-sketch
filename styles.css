@@ -13,8 +13,8 @@ button, #grid-size {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  /* width: 100vw; */
-  /* height: 100vw; */
+  width: 960px;
+  height: 700px;
   border: 2px solid blue;
   gap: 0;
   overflow: hidden;

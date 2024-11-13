@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const container = document.getElementById('squares-container');
   const gridSizeBtn = document.getElementById('grid-size');
-  let gridSize = 10;
+  let gridSize = 16;
   
   function buildGrid() {
     let sqWidth = Math.floor(windowWidth / gridSize) - 1;
